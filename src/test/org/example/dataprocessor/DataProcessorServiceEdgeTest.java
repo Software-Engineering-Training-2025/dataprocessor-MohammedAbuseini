@@ -14,7 +14,7 @@ class DataProcessorServiceEdgeTest {
     @Test
     void emptyAfterCleaning_mean_nan() throws Exception {
         DataProcessorService svc = new DataProcessorService();
-        double r = svc.process(
+        Double r = svc.process(
                 CleaningType.REMOVE_NEGATIVES,
                 AnalysisType.MEAN,
                 OutputType.CONSOLE,
@@ -26,7 +26,7 @@ class DataProcessorServiceEdgeTest {
     @Test
     void emptyAfterCleaning_stddev_nan() throws Exception {
         DataProcessorService svc = new DataProcessorService();
-        double r = svc.process(
+        Double r = svc.process(
                 CleaningType.REMOVE_NEGATIVES,
                 AnalysisType.STD_DEV,
                 OutputType.TEXT_FILE,
@@ -38,7 +38,7 @@ class DataProcessorServiceEdgeTest {
     @Test
     void empty_p90_nan() throws Exception {
         DataProcessorService svc = new DataProcessorService();
-        double r = svc.process(
+        Double r = svc.process(
                 CleaningType.REMOVE_NEGATIVES,
                 AnalysisType.P90_NEAREST_RANK,
                 OutputType.CONSOLE,
@@ -50,7 +50,7 @@ class DataProcessorServiceEdgeTest {
     @Test
     void empty_top3_returns_zero() throws Exception {
         DataProcessorService svc = new DataProcessorService();
-        double r = svc.process(
+        Double r = svc.process(
                 CleaningType.REMOVE_NEGATIVES,
                 AnalysisType.TOP3_FREQUENT_COUNT_SUM,
                 OutputType.CONSOLE,
@@ -62,7 +62,7 @@ class DataProcessorServiceEdgeTest {
     @Test
     void median_even_correct() throws Exception {
         DataProcessorService svc = new DataProcessorService();
-        double r = svc.process(
+        Double r = svc.process(
                 CleaningType.REPLACE_NEGATIVES_WITH_ZERO,
                 AnalysisType.MEDIAN,
                 OutputType.CONSOLE,
